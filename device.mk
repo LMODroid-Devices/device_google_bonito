@@ -356,7 +356,8 @@ PRODUCT_PACKAGES += \
 
 # Health HAL
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service.bonito
+    android.hardware.health@2.1-impl-bonito \
+    android.hardware.health@2.1-service
 
 # Storage health HAL
 PRODUCT_PACKAGES += \
@@ -365,8 +366,7 @@ PRODUCT_PACKAGES += \
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.qcom \
-    android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service
+    hardware.google.light@1.0-service
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.lights=qcom
 
@@ -391,8 +391,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DRM HAL
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm-service.clearkey
 
@@ -490,9 +488,9 @@ endif
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.2-impl-pixel-legacy \
+    android.hardware.boot@1.2-impl-pixel-legacy.recovery \
+    android.hardware.boot@1.2-service \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
@@ -859,7 +857,6 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.manufacturer=Qualcomm
 PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SDM670
 
 include hardware/google/pixel/vibrator/drv2624/device.mk
-include hardware/google/pixel/pixelstats/device.mk
 include hardware/google/pixel/mm/device_legacy.mk
 include device/google/gs-common/thermal/thermal_hal/device.mk
 

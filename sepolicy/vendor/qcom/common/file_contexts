@@ -153,6 +153,7 @@
 /vendor/bin/hw/hardware\.google\.media\.c2@1\.0-service-software u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.allocator@1\.0-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /vendor/bin/hw/vendor\.google\.wireless_charger@1\.0-service-vendor       u:object_r:hal_wlc_exec:s0
+/vendor/bin/hw/hardware\.google\.light@1\.0-service                    u:object_r:hal_light_default_exec:s0
 
 ###############################################
 # same-process HAL files and their dependencies
@@ -267,6 +268,3 @@
 
 # eSIM
 /sys/firmware/devicetree/base/chosen/cdt/cdb2/esim u:object_r:sysfs_esim:s0
-
-# vendor-provided system HAL
-/system/bin/hw/hardware\.google\.pixelstats@1\.0-service  u:object_r:pixelstats_system_exec:s0
